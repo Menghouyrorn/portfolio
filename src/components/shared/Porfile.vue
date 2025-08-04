@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-y-2">
     <div class="w-[120px] h-[120px] mx-auto">
       <div
-        class="w-full h-full rounded-full bg-[url('/public/me.jpg')] bg-cover bg-center p-2"
+        class="w-full h-full rounded-full bg-[url('/me.jpg')] bg-cover bg-center p-2"
       ></div>
       <div class="w-full h-full relative flex justify-end right-3 -top-6">
         <div class="w-[12px] h-[12px] right-1 rounded-full bg-green-500"></div>
