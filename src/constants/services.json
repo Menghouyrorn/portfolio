@@ -1,0 +1,17 @@
+[
+  {
+    "img": "web.png",
+    "title": "Web Developer",
+    "description": "System , Blog , E-Commerce , POS"
+  },
+  {
+    "img": "front.png",
+    "title": "Frontend Developer",
+    "description": "System , Blog , E-Commerce , POS"
+  },
+  {
+    "img": "backend.png",
+    "title": "Backend Developer",
+    "description": "System , Blog , E-Commerce , POS"
+  }
+]

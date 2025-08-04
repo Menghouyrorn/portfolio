@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between">
     <SideBarLeft />
-    <div class="w-[65%] border my-2">
+    <div class="w-[70%] border bg-[#F0F0F6] dark:bg-transparent p-3">
       <RouterView />
     </div>
     <SideBarRight />

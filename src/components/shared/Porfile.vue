@@ -13,28 +13,41 @@
       Web Developer
     </p>
     <div class="flex justify-center gap-x-2.5 w-full items-center">
-      <Button
-        class="bg-[#FFB400] rounded-full cursor-pointer hover:bg-[#FFA300] text-black"
-        size="icon"
-        ><Facebook :size="20"
-      /></Button>
-      <Button
-        class="bg-[#FFB400] rounded-full cursor-pointer hover:bg-[#FFA300] text-black"
-        size="icon"
-        ><Linkedin :size="20"
-      /></Button>
-      <Button
-        class="bg-[#FFB400] rounded-full cursor-pointer hover:bg-[#FFA300] text-black"
-        size="icon"
-        ><Github :size="20"
-      /></Button>
+      <a target="_blank" href="https://www.facebook.com/">
+        <Button
+          class="bg-[#FFB400] rounded-full cursor-pointer hover:bg-[#FFA300] text-black"
+          size="icon"
+          ><Facebook :size="20"
+        /></Button>
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/">
+        <Button
+          class="bg-[#FFB400] rounded-full cursor-pointer hover:bg-[#FFA300] text-black"
+          size="icon"
+          ><Linkedin
+        /></Button>
+      </a>
+      <a target="_blank" href="https://github.com/Menghouyrorn">
+        <Button
+          class="bg-[#FFB400] rounded-full cursor-pointer hover:bg-[#FFA300] text-black"
+          size="icon"
+          ><Github
+        /></Button>
+      </a>
+      <a target="_blank" href="https://t.me/Rorn_Menghouy">
+        <Button
+          class="bg-[#FFB400] rounded-full cursor-pointer hover:bg-[#FFA300] text-black"
+          size="icon"
+          ><Send
+        /></Button>
+      </a>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import Button from "../ui/button/Button.vue";
-import { Facebook, Linkedin, Github } from "lucide-vue-next";
+import { Facebook, Linkedin, Github, Send } from "lucide-vue-next";
 </script>
 
 <style></style>

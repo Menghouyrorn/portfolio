@@ -2,14 +2,22 @@
   <TooltipProvider :delay-duration="400">
     <Tooltip>
       <TooltipTrigger>
-        <RouterLink :to="link">
-          <Button size="icon" class="cursor-pointer" variant="ghost"
+        <RouterLink :to="link as any">
+          <Button
+            @click="onClick"
+            size="icon"
+            :class="
+              isActive && link
+                ? 'text-[#FFB400] cursor-pointer'
+                : 'cursor-pointer'
+            "
+            variant="ghost"
             ><component :is="icon"
           /></Button>
         </RouterLink>
       </TooltipTrigger>
       <TooltipContent>
-        <p>Light Mode</p>
+        {{ tooltip }}
       </TooltipContent>
     </Tooltip>
   </TooltipProvider>
@@ -23,10 +31,14 @@ import TooltipTrigger from "../ui/tooltip/TooltipTrigger.vue";
 import TooltipContent from "../ui/tooltip/TooltipContent.vue";
 import { RouterLink } from "vue-router";
 import type { Component } from "vue";
-defineProps<{
+import { ActiveLink } from "@/hooks/useActiveLick";
+const props = defineProps<{
   icon: Component;
-  link: string;
+  link?: string;
+  onClick?: () => void;
+  tooltip?: string;
 }>();
+const isActive = ActiveLink({ route: props.link });
 </script>
 
 <style></style>

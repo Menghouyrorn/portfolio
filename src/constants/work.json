@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "image": "logo_ppi.png",
+    "position": "Web Developer",
+    "date": "Jan-2025 - Present",
+    "company": "People & Partners Insurance PLC."
+  },
+  {
+    "id": 2,
+    "image": "tech.jpg",
+    "position": "Freelance Frontend Developer",
+    "date": "Sep-2024 - Present",
+    "company": "Techdevx Solution"
+  },
+  {
+    "id": 3,
+    "image": "logo_ppi.png",
+    "position": "Developer",
+    "date": "Sep-2024 - Dec-2024",
+    "company": "People & Partners Insurance PLC."
+  },
+  {
+    "id": 4,
+    "image": "logo_ppi.png",
+    "position": "Intern Web Application Developer",
+    "date": "Jun-2024 - Aug-2024",
+    "company": "People & Partners Insurance PLC."
+  }
+]
