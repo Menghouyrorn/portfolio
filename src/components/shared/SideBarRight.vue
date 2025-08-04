@@ -24,13 +24,11 @@
 import { Sun, Eclipse, Home, BriefcaseBusiness } from "lucide-vue-next";
 import TooltipButton from "./TooltipButton.vue";
 import { useColorMode } from "@vueuse/core";
-import { ActiveLink } from "@/hooks/useActiveLick";
 
 const colorMode = useColorMode();
 
 const toggleMode = () => {
   colorMode.value = colorMode.value === "dark" ? "light" : "dark";
-  console.log(colorMode.value);
 };
 </script>
 

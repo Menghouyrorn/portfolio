@@ -33,17 +33,14 @@ import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
 import ButtonIcon from "./ButtonIcon.vue";
 import { ArrowDownToLine } from "lucide-vue-next";
-let isdownload = false;
 
 const downloadCV = () => {
-  isdownload = true;
   const link = document.createElement("a");
   link.href = "/my_cv.pdf";
   link.download = "Rorn_Menghouy_Jr_Web_Developer.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-  isdownload = false;
 };
 </script>
 
