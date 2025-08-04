@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import Button from "@/components/ui/button/Button.vue";
+import Default from "./layouts/default.vue";
 </script>
 <template>
   <div>
-    <Button size="sm">Click</Button>
+    <Default />
+    <!-- <ButtonIcon size="lg" title="Click" class="rounded-sm" variant="outline">
+      <template #prefix_icon>
+        <House :size="23" class="text-black" />
+      </template>
+    </ButtonIcon> -->
   </div>
 </template>
 

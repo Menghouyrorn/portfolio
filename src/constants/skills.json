@@ -1,0 +1,58 @@
+[
+  {
+    "language": "Javascript",
+    "percentage": 80
+  },
+  {
+    "language": "PHP",
+    "percentage": 80
+  },
+  {
+    "language": "HTML",
+    "percentage": 90
+  },
+  {
+    "language": "CSS",
+    "percentage": 90
+  },
+  {
+    "language": "Vue",
+    "percentage": 80
+  },
+  {
+    "language": "React",
+    "percentage": 80
+  },
+  {
+    "language": "Laravel",
+    "percentage": 70
+  },
+  {
+    "language": "Typescript",
+    "percentage": 60
+  },
+  {
+    "language": "Tailwind CSS",
+    "percentage": 80
+  },
+  {
+    "language": "ShadcnUI",
+    "percentage": 90
+  },
+  {
+    "language": "ElementUI",
+    "percentage": 90
+  },
+  {
+    "language": "SQL",
+    "percentage": 70
+  },
+  {
+    "language": "MySql",
+    "percentage": 70
+  },
+  {
+    "language": "GitHub",
+    "percentage": 70
+  }
+]
