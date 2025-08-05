@@ -1,7 +1,7 @@
 <template>
   <TooltipProvider :delay-duration="400">
     <Tooltip>
-      <TooltipTrigger>
+      <TooltipTrigger as-child>
         <RouterLink :to="link as any">
           <Button
             @click="onClick"

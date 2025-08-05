@@ -5,12 +5,13 @@
     <TooltipButton
       :onClick="toggleMode"
       :icon="colorMode !== 'dark' ? Eclipse : Sun"
+      link=""
       :tooltip="
         colorMode !== 'dark' ? 'Switch to Dark Mode' : 'Switch to Light Mode'
       "
     />
     <div class="flex flex-col gap-y-2">
-      <TooltipButton :icon="Home" link="/" tooltip="home" />
+      <TooltipButton :icon="Home" link="/" tooltip="Home" />
       <TooltipButton
         :icon="BriefcaseBusiness"
         link="/work"
