@@ -11,4 +11,8 @@ export const ROUTE_DATA = [
     path: "/work",
     component: () => import("@/views/Work.vue"),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/",
+  },
 ];
