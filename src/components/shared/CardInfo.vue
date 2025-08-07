@@ -2,33 +2,83 @@
   <Card class="h-auto rounded-sm">
     <CardContent class="flex h-auto gap-x-6 justify-around">
       <div class="flex flex-col gap-y-6 justify-center">
-        <p class="text-3xl font-bold">
-          I'm <span class="text-[#FFB400]">Web</span> Developer
-        </p>
-        <p class="font-semibold text-gray-500 dark:text-gray-400">
-          I'm passionate about building responsive and user-friendly web
-          applications, with a focus on Vue.js and modern JavaScript frameworks.
-          and I love to learn new technologies and improve my skills.
-        </p>
-        <ButtonIcon
-          @click="downloadCV"
-          title="DOWNLOAD CV"
-          class="w-48 rounded-sm bg-[#FFB400] cursor-pointer"
-          variant="outline"
+        <motion.div
+          :initial="{ y: -100, opacity: 0 }"
+          :animate="{ y: 0, opacity: 1 }"
+          :transition="{
+            delay: 0.2,
+            type: 'spring',
+            damping: 20,
+            stiffness: 55,
+          }"
         >
-          <template #suffix_icon>
-            <ArrowDownToLine />
-          </template>
-        </ButtonIcon>
+          <p class="text-3xl font-bold">
+            I'm <span class="text-[#FFB400]">Web</span> Developer
+          </p>
+        </motion.div>
+
+        <motion.div
+          :initial="{ y: -100, opacity: 0 }"
+          :animate="{
+            y: 0,
+            opacity: 1,
+          }"
+          :transition="{
+            delay: 0.1,
+            type: 'spring',
+            damping: 20,
+            stiffness: 55,
+          }"
+        >
+          <p class="font-semibold text-gray-500 dark:text-gray-400">
+            I'm passionate about building responsive and user-friendly web
+            applications, with a focus on Vue.js and modern JavaScript
+            frameworks. and I love to learn new technologies and improve my
+            skills.
+          </p>
+        </motion.div>
+        <motion.div
+          :initial="{ x: 100, opacity: 0 }"
+          :animate="{ x: 0, opacity: 1 }"
+          :transition="{
+            delay: 0.1,
+            type: 'spring',
+            damping: 20,
+            stiffness: 55,
+          }"
+        >
+          <ButtonIcon
+            @click="downloadCV"
+            title="DOWNLOAD CV"
+            class="w-48 rounded-sm bg-[#FFB400] cursor-pointer"
+            variant="outline"
+          >
+            <template #suffix_icon>
+              <ArrowDownToLine />
+            </template>
+          </ButtonIcon>
+        </motion.div>
       </div>
-      <div>
-        <img src="/houy.jpg" width="550" />
-      </div>
+      <motion.div
+        :initial="{ x: 100, opacity: 0 }"
+        :animate="{ x: 0, opacity: 1 }"
+        :transition="{
+          delay: 0.1,
+          type: 'spring',
+          damping: 20,
+          stiffness: 55,
+        }"
+      >
+        <div>
+          <img src="/houy.jpg" width="550" />
+        </div>
+      </motion.div>
     </CardContent>
   </Card>
 </template>
 
 <script lang="ts" setup>
+import { delay, motion } from "motion-v";
 import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
 import ButtonIcon from "./ButtonIcon.vue";

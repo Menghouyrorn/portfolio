@@ -20,7 +20,10 @@
           ><Facebook :size="20"
         /></Button>
       </a>
-      <a target="_blank" href="https://www.linkedin.com/">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/rorn-menghouy-2480b3232"
+      >
         <Button
           class="bg-[#FFB400] rounded-full cursor-pointer hover:bg-[#FFA300] text-black"
           size="icon"

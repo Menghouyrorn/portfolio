@@ -1,13 +1,36 @@
 <template>
   <div class="space-y-10">
-    <p class="text-3xl font-bold text-center">My Services</p>
-    <div class="grid grid-cols-3 gap-x-6">
-      <div v-for="items of services" :key="items.title">
-        <ServiceCard
-          :image="items.img"
-          :title="items.title"
-          :description="items.description"
-        />
+    <motion.div
+      :initial="{ y: -50, opacity: 0 }"
+      :animate="{ y: 0, opacity: 1 }"
+      :transition="{
+        delay: 0.4,
+        type: 'spring',
+        damping: 20,
+        stiffness: 55,
+      }"
+    >
+      <p class="text-3xl font-bold text-center">My Services</p>
+    </motion.div>
+    <div class="grid grid-cols-3 gap-x-6" ref="boxRef">
+      <div v-for="(items, index) of services" :key="items.title">
+        <motion.div
+          v-if="isInView"
+          :initial="{ x: -100, opacity: 0 }"
+          :animate="{ x: 0, opacity: 1 }"
+          :transition="{
+            delay: 0.15 + index / 1.5,
+            type: 'spring',
+            damping: 20,
+            stiffness: 55,
+          }"
+        >
+          <ServiceCard
+            :image="items.img"
+            :title="items.title"
+            :description="items.description"
+          />
+        </motion.div>
       </div>
     </div>
   </div>
@@ -16,6 +39,12 @@
 <script lang="ts" setup>
 import ServiceCard from "./ServiceCard.vue";
 import services from "../../constants/services.json";
+import { motion } from "motion-v";
+import { useInView } from "motion-v";
+import { computed, ref } from "vue";
+let contaniner = ref();
+let boxRef = ref();
+let isInView = useInView(boxRef);
 </script>
 
 <style></style>
