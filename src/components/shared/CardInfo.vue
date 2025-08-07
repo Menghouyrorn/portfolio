@@ -78,7 +78,7 @@
 </template>
 
 <script lang="ts" setup>
-import { delay, motion } from "motion-v";
+import { motion } from "motion-v";
 import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
 import ButtonIcon from "./ButtonIcon.vue";

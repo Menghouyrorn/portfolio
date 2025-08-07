@@ -41,8 +41,7 @@ import ServiceCard from "./ServiceCard.vue";
 import services from "../../constants/services.json";
 import { motion } from "motion-v";
 import { useInView } from "motion-v";
-import { computed, ref } from "vue";
-let contaniner = ref();
+import { ref } from "vue";
 let boxRef = ref();
 let isInView = useInView(boxRef);
 </script>
