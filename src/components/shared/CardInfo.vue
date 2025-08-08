@@ -70,7 +70,10 @@
         }"
       >
         <div>
-          <img src="/houy.jpg" width="550" />
+          <div v-if="isLoading" class="w-[275px] h-[405px]">
+            <Skeleton class="w-full h-full" />
+          </div>
+          <img src="/houy.jpg" width="550" v-else />
         </div>
       </motion.div>
     </CardContent>
@@ -83,6 +86,8 @@ import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
 import ButtonIcon from "./ButtonIcon.vue";
 import { ArrowDownToLine } from "lucide-vue-next";
+import { onMounted, ref } from "vue";
+import Skeleton from "../ui/skeleton/Skeleton.vue";
 
 const downloadCV = () => {
   const link = document.createElement("a");
@@ -92,6 +97,21 @@ const downloadCV = () => {
   link.click();
   document.body.removeChild(link);
 };
+
+let isLoading = ref(true);
+
+const loading_image = async (url: any) => {
+  let img = new Image();
+  img.src = url;
+  await new Promise((res) => (img.onload = res));
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 1000);
+};
+
+onMounted(() => {
+  loading_image("/houy.jpg");
+});
 </script>
 
 <style></style>
