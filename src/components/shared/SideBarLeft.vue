@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import Button from "../ui/button/Button.vue";
 import CardProgress from "./CardProgress.vue";
 import PersonalInfo from "./PersonalInfo.vue";
