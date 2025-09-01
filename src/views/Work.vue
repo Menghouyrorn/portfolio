@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10 space-y-2">
+  <div class="mt-10 space-y-2 w-full">
     <motion.div
       :initial="{ y: -100, opacity: 0 }"
       :animate="{ y: 0, opacity: 1 }"
@@ -27,7 +27,7 @@
       </p>
     </motion.div>
 
-    <Card class="rounded-sm mx-2">
+    <Card class="rounded-sm mx-2 w-full">
       <CardContent>
         <div v-for="(value, index) in work" :key="value.id" class="mb-4">
           <motion.div

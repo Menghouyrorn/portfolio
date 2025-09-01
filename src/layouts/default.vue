@@ -1,7 +1,9 @@
 <template>
-  <div class="flex justify-between">
-    <SideBarLeft />
-    <div class="w-[70%] border bg-[#F0F0F6] dark:bg-transparent p-3">
+  <div class="flex">
+    <div class="w-auto">
+      <SideBarLeft />
+    </div>
+    <div class="w-full border bg-[#F0F0F6] dark:bg-transparent p-3">
       <RouterView />
     </div>
     <SideBarRight />
