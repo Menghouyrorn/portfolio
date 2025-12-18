@@ -85,7 +85,7 @@ import { motion } from "motion-v";
 import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
 import ButtonIcon from "./ButtonIcon.vue";
-import { ArrowDownToLine, Loader } from "lucide-vue-next";
+import { ArrowDownToLine } from "lucide-vue-next";
 import { onMounted, ref } from "vue";
 import Skeleton from "../ui/skeleton/Skeleton.vue";
 
