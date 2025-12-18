@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Button :class="classNames" :variant="variant" :size="size"
-      ><slot name="prefix_icon" />{{ title }}<slot name="suffix_icon"
+    <Button :class="classNames" :variant="variant" :size="size">
+      <slot name="prefix_icon" />{{ title }}<slot name="suffix_icon"
     /></Button>
   </div>
 </template>

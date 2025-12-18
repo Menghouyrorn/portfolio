@@ -85,14 +85,14 @@ import { motion } from "motion-v";
 import Card from "../ui/card/Card.vue";
 import CardContent from "../ui/card/CardContent.vue";
 import ButtonIcon from "./ButtonIcon.vue";
-import { ArrowDownToLine } from "lucide-vue-next";
+import { ArrowDownToLine, Loader } from "lucide-vue-next";
 import { onMounted, ref } from "vue";
 import Skeleton from "../ui/skeleton/Skeleton.vue";
 
 const downloadCV = () => {
   const link = document.createElement("a");
   link.href = "/my_cv.pdf";
-  link.download = "Rorn_Menghouy_Jr_Web_Developer.pdf";
+  link.download = "Rorn_Menghouy_Jr_Frontend_Developer.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
