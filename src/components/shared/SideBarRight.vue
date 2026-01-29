@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-24 gap-y-20 shadow-md h-auto flex flex-col items-center mr-1 py-4"
+    class="w-24 md:gap-y-20 shadow-md h-auto md:flex md:flex-col md:items-center mr-1 py-4 hidden"
   >
     <TooltipButton
       :onClick="toggleMode"

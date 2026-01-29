@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full shadow-sm h-[7vh] bg-white flex items-center justify-center gap-x-2"
+    class="w-full shadow-sm md:h-[7vh] sm:h-[4vh] sm:w-full sm:flex sm:justify-center sm:items-center bg-white flex items-center justify-center gap-x-2"
   >
     <ButtonLink
       v-for="route in ROUTE_DATA"

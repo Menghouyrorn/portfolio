@@ -1,79 +1,87 @@
 <template>
-  <Card class="h-auto rounded-sm">
-    <CardContent class="flex h-auto gap-x-6 justify-around">
-      <div class="flex flex-col gap-y-6 justify-center">
-        <motion.div
-          :initial="{ y: -100, opacity: 0 }"
-          :animate="{ y: 0, opacity: 1 }"
-          :transition="{
-            delay: 0.2,
-            type: 'spring',
-            damping: 20,
-            stiffness: 55,
-          }"
+  <Card
+    class="relative overflow-hidden rounded-xl border border-white/10 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl"
+  >
+    <div
+      class="absolute -top-24 -right-24 w-96 h-96 bg-[#FFB400]/20 rounded-full blur-3xl"
+    ></div>
+    <CardContent
+      class="relative flex flex-col md:flex-row gap-10 items-center justify-between p-8"
+    >
+      <motion.div
+        class="flex flex-col gap-y-6 max-w-xl"
+        :initial="{ opacity: 0, y: 40 }"
+        :animate="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 0.6, ease: 'easeOut' }"
+      >
+        <motion.h1
+          class="text-4xl md:text-5xl font-extrabold leading-tight"
+          :initial="{ opacity: 0, y: -30 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ delay: 0.2 }"
         >
-          <p class="text-3xl font-bold">
-            I'm <span class="text-[#FFB400]">Web</span> Developer
-          </p>
-        </motion.div>
-
-        <motion.div
-          :initial="{ y: -100, opacity: 0 }"
-          :animate="{
-            y: 0,
-            opacity: 1,
-          }"
-          :transition="{
-            delay: 0.1,
-            type: 'spring',
-            damping: 20,
-            stiffness: 55,
-          }"
+          I’m a
+          <span
+            class="relative bg-gradient-to-r from-[#FFB400] to-orange-500 bg-clip-text text-transparent"
+          >
+            Web Developer
+            <span
+              class="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#FFB400] to-orange-500 rounded-full"
+            ></span>
+          </span>
+        </motion.h1>
+        <motion.p
+          class="text-gray-600 dark:text-gray-400 leading-relaxed"
+          :initial="{ opacity: 0, y: 20 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ delay: 0.35 }"
         >
-          <p class="font-semibold text-gray-500 dark:text-gray-400">
-            I'm passionate about building responsive and user-friendly web
-            applications, with a focus on Vue.js and modern JavaScript
-            frameworks. and I love to learn new technologies and improve my
-            skills.
-          </p>
-        </motion.div>
+          I craft modern, responsive, and user-friendly web applications with
+          <span class="font-semibold text-gray-800 dark:text-gray-200">
+            Vue.js & modern JavaScript </span
+          >. Always learning, always improving 🚀
+        </motion.p>
         <motion.div
-          :initial="{ x: 100, opacity: 0 }"
-          :animate="{ x: 0, opacity: 1 }"
-          :transition="{
-            delay: 0.1,
-            type: 'spring',
-            damping: 20,
-            stiffness: 55,
-          }"
+          :initial="{ opacity: 0, x: -20 }"
+          :animate="{ opacity: 1, x: 0 }"
+          :transition="{ delay: 0.5 }"
         >
           <ButtonIcon
             @click="downloadCV"
             title="DOWNLOAD CV"
-            class="w-48 rounded-sm bg-[#FFB400] cursor-pointer"
+            class="group w-52 rounded-xl bg-gradient-to-r from-[#FFB400] to-orange-500 text-black font-semibold shadow-lg shadow-orange-500/30 hover:scale-105 cursor-pointer transition-all duration-300"
             variant="outline"
           >
             <template #suffix_icon>
-              <ArrowDownToLine />
+              <ArrowDownToLine
+                class="transition-transform duration-300 group-hover:translate-y-1"
+              />
             </template>
           </ButtonIcon>
         </motion.div>
-      </div>
+      </motion.div>
       <motion.div
-        :initial="{ x: 100, opacity: 0 }"
-        :animate="{ x: 0, opacity: 1 }"
+        class="hidden md:block relative cursor-pointer"
+        :animate="{ y: [0, -6, 0] }"
         :transition="{
-          delay: 0.1,
-          type: 'spring',
-          damping: 20,
-          stiffness: 55,
+          delay: 0.6,
+          duration: 3,
+          repeat: Infinity,
+          ease: 'easeInOut',
         }"
       >
-        <div>
-          <div v-if="isLoading" class="w-[275px] h-[405px]">
-            <Skeleton class="w-full h-full" />
+        <div class="relative">
+          <div
+            class="absolute inset-0 rounded-sm bg-gradient-to-tr from-[#FFB400]/40 to-orange-500/40 blur-2xl"
+          ></div>
+          <div v-if="isLoading" class="w-[360px] h-[520px]">
+            <Skeleton class="w-full h-full rounded-sm" />
           </div>
-          <img src="/houy.jpg" width="550" v-else />
+          <img
+            v-else
+            src="/houy.jpg"
+            class="relative w-[360px] h-[520px] object-cover rounded-sm shadow-sm shadow-black/30"
+          />
         </div>
       </motion.div>
     </CardContent>

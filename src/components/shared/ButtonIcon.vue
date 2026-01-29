@@ -1,13 +1,12 @@
 <template>
-  <div>
-    <Button :class="classNames" :variant="variant" :size="size">
-      <slot name="prefix_icon" />{{ title }}<slot name="suffix_icon"
-    /></Button>
-  </div>
+  <Button :class="props.class" :variant="variant" :size="size">
+    <slot name="prefix_icon"></slot>
+    {{ title }}
+    <slot name="suffix_icon"></slot>
+  </Button>
 </template>
 
 <script lang="ts" setup>
-import clsx from "clsx";
 import Button from "../ui/button/Button.vue";
 import type { HTMLAttributes } from "vue";
 import type { PrimitiveProps } from "reka-ui";
@@ -20,7 +19,6 @@ interface ButtonPros extends PrimitiveProps {
 const props = withDefaults(defineProps<ButtonPros>(), {
   as: "button",
 });
-let classNames = clsx(props.class, "");
 </script>
 
 <style></style>

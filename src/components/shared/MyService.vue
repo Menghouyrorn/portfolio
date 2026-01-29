@@ -6,14 +6,14 @@
       :transition="{
         delay: 0.4,
         type: 'spring',
-        damping: 20,
+        damping: 10,
         stiffness: 55,
       }"
     >
       <p class="text-3xl font-bold text-center">My Services</p>
     </motion.div>
-    <div class="grid grid-cols-3 gap-x-6" ref="boxRef">
-      <div v-for="(items, index) of services" :key="items.title">
+    <div class="grid md:grid-cols-3 gap-6" ref="boxRef">
+      <div v-for="(items, index) in services" :key="items.title">
         <motion.div
           v-if="isInView"
           :initial="{ x: -100, opacity: 0 }"

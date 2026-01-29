@@ -10,7 +10,7 @@
         stiffness: 55,
       }"
     >
-      <p class="text-3xl font-bold text-center">Work History</p>
+      <p class="md:text-3xl sm:text-2xl font-bold text-center">Work History</p>
     </motion.div>
     <motion.div
       :initial="{ x: 100, opacity: 0 }"
@@ -22,7 +22,7 @@
         stiffness: 55,
       }"
     >
-      <p class="text-center font-semibold text-gray-500 dark:text-gray-400">
+      <p class="text-center sm:text-xs font-semibold text-gray-500 dark:text-gray-400">
         Here is a summary of my work experience.
       </p>
     </motion.div>
@@ -47,7 +47,7 @@
               :company="value.company"
             />
           </motion.div>
-          <hr class="border-2" />
+          <hr class="border-2 mt-4" />
         </div>
       </CardContent>
     </Card>
