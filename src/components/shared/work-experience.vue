@@ -1,6 +1,6 @@
 <template>
-  <div class="flex items-center gap-x-4">
-    <img :src="`/${image}`" width="140" />
+  <div class="md:flex md:flex-row md:justify-start @min-xs:flex @min-xs:flex-col @min-xs:justify-center @min-xs:items-center items-center gap-x-4">
+    <img :src="`/${image}`" class="@min-xs:m-auto md:m-0" width="140" />
     <div class="space-y-2">
       <p class="font-extrabold text-gray-500 dark:text-gray-400">
         {{ position }}

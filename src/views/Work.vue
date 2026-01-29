@@ -27,7 +27,7 @@
       </p>
     </motion.div>
 
-    <Card class="rounded-sm mx-2 w-full">
+    <Card class="rounded-sm mx-2 w-full m-auto">
       <CardContent>
         <div v-for="(value, index) in work" :key="value.id" class="mb-4">
           <motion.div
