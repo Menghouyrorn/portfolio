@@ -12,13 +12,13 @@
         class="flex flex-col gap-y-6 max-w-xl"
         :initial="{ opacity: 0, y: 40 }"
         :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.6, ease: 'easeOut' }"
+        :transition="{ duration: 0.3, ease: 'easeOut' }"
       >
         <motion.h1
           class="text-4xl md:text-5xl font-extrabold leading-tight"
-          :initial="{ opacity: 0, y: -30 }"
+          :initial="{ opacity: 0, y: -40 }"
           :animate="{ opacity: 1, y: 0 }"
-          :transition="{ delay: 0.2 }"
+          :transition="{ delay: 0.5 }"
         >
           I’m a
           <span
@@ -34,7 +34,7 @@
           class="text-gray-600 dark:text-gray-400 leading-relaxed"
           :initial="{ opacity: 0, y: 20 }"
           :animate="{ opacity: 1, y: 0 }"
-          :transition="{ delay: 0.35 }"
+          :transition="{ delay: 1 }"
         >
           I craft modern, responsive, and user-friendly web applications with
           <span class="font-semibold text-gray-800 dark:text-gray-200">
@@ -44,7 +44,7 @@
         <motion.div
           :initial="{ opacity: 0, x: -20 }"
           :animate="{ opacity: 1, x: 0 }"
-          :transition="{ delay: 0.5 }"
+          :transition="{ delay: 1.5 }"
         >
           <ButtonIcon
             @click="downloadCV"
@@ -62,9 +62,9 @@
       </motion.div>
       <motion.div
         class="hidden md:block relative cursor-pointer"
-        :animate="{ y: [0, -6, 0] }"
+        :animate="{ y: [0, -10, 0] }"
         :transition="{
-          delay: 0.6,
+          delay: 0.2,
           duration: 3,
           repeat: Infinity,
           ease: 'easeInOut',
@@ -72,7 +72,7 @@
       >
         <div class="relative">
           <div
-            class="absolute inset-0 rounded-sm bg-gradient-to-tr from-[#FFB400]/40 to-orange-500/40 blur-2xl"
+            class="absolute inset-0 rounded-sm bg-gradient-to-tr from-[#FFB400]/20 to-orange-500/20 blur-2xl"
           ></div>
           <div v-if="isLoading" class="w-[360px] h-[520px]">
             <Skeleton class="w-full h-full rounded-sm" />
@@ -80,7 +80,7 @@
           <img
             v-else
             src="/houy.jpg"
-            class="relative w-[360px] h-[520px] object-cover rounded-sm shadow-sm shadow-black/30"
+            class="relative w-[360px] h-[520px] object-cover rounded-sm shadow-sm shadow-black/20"
           />
         </div>
       </motion.div>
@@ -112,9 +112,7 @@ const loading_image = async (url: any) => {
   let img = new Image();
   img.src = url;
   await new Promise((res) => (img.onload = res));
-  setTimeout(() => {
-    isLoading.value = false;
-  }, 1000);
+  isLoading.value = false;
 };
 
 onMounted(() => {
