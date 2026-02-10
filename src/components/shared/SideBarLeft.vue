@@ -43,7 +43,7 @@ import language from "@/constants/languages.json";
 import skills from "@/constants/skills.json";
 import { PanelLeftClose, PanelLeftOpen } from "lucide-vue-next";
 let isMobile = ref<boolean>(
-  JSON.parse(window.localStorage.getItem("isMobile") || "false")
+  JSON.parse(window.localStorage.getItem("isMobile") || "true")
 );
 const onClick = () => {
   isMobile.value = !isMobile.value;

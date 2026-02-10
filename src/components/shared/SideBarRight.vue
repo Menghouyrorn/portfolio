@@ -11,22 +11,50 @@
       "
     />
     <div class="flex flex-col gap-y-2">
-      <TooltipButton :icon="Home" link="/" tooltip="Home" />
-      <TooltipButton
-        :icon="BriefcaseBusiness"
-        link="/work"
-        tooltip="Work Experience"
-      />
+      <TooltipButton v-for="v in route_data" :key="v.id" :icon="v.icon" :link="v.link" :tooltip="v.tooltip" :side="v.side"/>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Sun, Eclipse, Home, BriefcaseBusiness } from "lucide-vue-next";
+import { Sun, Eclipse, Home, BriefcaseBusiness,FileMinus } from "lucide-vue-next";
 import TooltipButton from "./TooltipButton.vue";
 import { useColorMode } from "@vueuse/core";
+import type { Component } from "vue";
 
 const colorMode = useColorMode();
+
+interface RouteType{
+  id:number | string,
+  icon:Component,
+  link:string,
+  tooltip:string,
+  side:'top' | 'right' | 'bottom' | 'left'
+};
+
+const route_data:RouteType[] = [
+  {
+    id:1,
+    icon:Home,
+    link:'/',
+    tooltip:'Home',
+    side:'top'
+  },
+  {
+    id:1,
+    icon:BriefcaseBusiness,
+    link:'/work',
+    tooltip:'Work Experience',
+    side:'right'
+  },
+  {
+    id:1,
+    icon:FileMinus,
+    link:'/recommendation',
+    tooltip:'Recommendation',
+    side:'left'
+  },
+]
 
 const toggleMode = () => {
   colorMode.value = colorMode.value === "dark" ? "light" : "dark";

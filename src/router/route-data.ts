@@ -1,4 +1,4 @@
-import { House,EqualApproximately,BriefcaseBusiness } from "lucide-vue-next";
+import { House,BriefcaseBusiness,FileMinus } from "lucide-vue-next";
 
 export const ROUTE_DATA = [
   {
@@ -7,9 +7,9 @@ export const ROUTE_DATA = [
     icon:House
   },
   {
-    path: "/about",
-    component: () => import("@/views/AboutPage.vue"),
-    icon:EqualApproximately
+    path: "/recommendation",
+    component: () => import("@/views/RecommendationPage.vue"),
+    icon:FileMinus
   },
   {
     path: "/work",

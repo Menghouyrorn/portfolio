@@ -1,5 +1,5 @@
 <template>
-  <div>about Page</div>
+  <div>Recommendation Page</div>
 </template>
 
 <script lang="ts" setup></script>

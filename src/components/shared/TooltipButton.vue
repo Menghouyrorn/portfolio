@@ -16,7 +16,7 @@
           /></Button>
         </RouterLink>
       </TooltipTrigger>
-      <TooltipContent>
+      <TooltipContent :side="side">
         {{ tooltip }}
       </TooltipContent>
     </Tooltip>
@@ -32,12 +32,15 @@ import TooltipContent from "../ui/tooltip/TooltipContent.vue";
 import { RouterLink } from "vue-router";
 import type { Component } from "vue";
 import { ActiveLink } from "@/hooks/useActiveLick";
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   icon: Component;
   link?: string;
   onClick?: () => void;
   tooltip?: string;
-}>();
+  side?:'top' | 'right' | 'bottom' | 'left'
+}>(),{
+  side:'top'
+});
 const isActive = ActiveLink({ route: props.link });
 </script>
 
