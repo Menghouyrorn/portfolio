@@ -2,7 +2,7 @@
   <RouterLink :to="path" v-slot="{ isActive }">
     <ButtonIcon
       v-bind="props"
-      :class="isActive ? 'text-amber-500 transition-normal' : 'dark:text-gray-700'"
+      :class="isActive ? 'text-amber-500 transition-normal' : 'dark:text-white'"
     >
       <slot name="btn_container"></slot>
       <template #prefix_icon>

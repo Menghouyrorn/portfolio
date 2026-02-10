@@ -2,14 +2,7 @@
   <div
     class="w-24 md:gap-y-20 shadow-md h-auto md:flex md:flex-col md:items-center mr-1 py-4 hidden"
   >
-    <TooltipButton
-      :onClick="toggleMode"
-      :icon="colorMode !== 'dark' ? Eclipse : Sun"
-      link=""
-      :tooltip="
-        colorMode !== 'dark' ? 'Switch to Dark Mode' : 'Switch to Light Mode'
-      "
-    />
+    <ButtonModeColor/>
     <div class="flex flex-col gap-y-2">
       <TooltipButton v-for="v in route_data" :key="v.id" :icon="v.icon" :link="v.link" :tooltip="v.tooltip" :side="v.side"/>
     </div>
@@ -17,12 +10,11 @@
 </template>
 
 <script lang="ts" setup>
-import { Sun, Eclipse, Home, BriefcaseBusiness,FileMinus } from "lucide-vue-next";
+import {Home, BriefcaseBusiness,FileMinus } from "lucide-vue-next";
 import TooltipButton from "./TooltipButton.vue";
-import { useColorMode } from "@vueuse/core";
 import type { Component } from "vue";
+import ButtonModeColor from "./ButtonModeColor.vue";
 
-const colorMode = useColorMode();
 
 interface RouteType{
   id:number | string,
@@ -56,9 +48,6 @@ const route_data:RouteType[] = [
   },
 ]
 
-const toggleMode = () => {
-  colorMode.value = colorMode.value === "dark" ? "light" : "dark";
-};
 </script>
 
 <style></style>
