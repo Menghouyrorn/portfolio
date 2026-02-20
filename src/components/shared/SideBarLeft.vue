@@ -2,7 +2,7 @@
   <div
     :class="
       isMobile
-        ? 'shadow-lg h-full w-auto py-4 flex flex-col gap-y-4 transition-all'
+        ? 'shadow-lg h-full w-auto py-4 flex flex-col gap-y-4'
         : 'shadow-lg h-auto w-[360px] py-4 flex flex-col gap-y-4'
     "
   >
