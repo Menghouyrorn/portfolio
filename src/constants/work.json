@@ -1,9 +1,16 @@
 [
   {
     "id": 1,
+    "image": "logo_s.jpg",
+    "position": "Software Developer",
+    "date": "Mar-2026 - Present",
+    "company": "Soft Creative"
+  },
+  {
+    "id": 1,
     "image": "logo_ppi.png",
     "position": "Web Developer",
-    "date": "Jan-2025 - Present",
+    "date": "Jan-2025 - Mar-2026",
     "company": "People & Partners Insurance PLC."
   },
   {
