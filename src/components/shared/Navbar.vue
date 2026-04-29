@@ -4,7 +4,7 @@
     class="flex justify-center items-center w-full"
     >
       <ButtonLink
-        v-for="route in ROUTE_DATA"
+        v-for="route in ROUTE_DATA[0].children"
         :key="route.path"
         :path="route.path"
         :prefix_icon="route.icon"
@@ -23,6 +23,7 @@
 import ButtonLink from "./ButtonLink.vue";
 import { ROUTE_DATA } from "@/router/route-data";
 import ButtonModeColor from "./ButtonModeColor.vue";
+console.log(ROUTE_DATA[0].children);
 </script>
 
 <style></style>
