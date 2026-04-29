@@ -23,7 +23,6 @@
 import ButtonLink from "./ButtonLink.vue";
 import { ROUTE_DATA } from "@/router/route-data";
 import ButtonModeColor from "./ButtonModeColor.vue";
-console.log(ROUTE_DATA[0].children);
 </script>
 
 <style></style>

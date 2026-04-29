@@ -30,10 +30,12 @@ export const ROUTE_DATA = [
       {
         path: "",
         component: () => import("@/admin/Dashboard.vue"),
+        icon:House
       },
       {
         path: "login",
         component: () => import("@/components/auth/login.vue"),
+        icon:FileMinus
       },
     ],
   },
